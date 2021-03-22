@@ -38,6 +38,11 @@ const Widgets = React.lazy(() => import('./views/widgets/Widgets'));
 const Users = React.lazy(() => import('./views/users/Users'));
 const User = React.lazy(() => import('./views/users/User'));
 const DeposirProductList = React.lazy(() => import('./views/AdminDepositProduct/DeposirProductList/DepositProductList'));
+const FundList = React.lazy(() => import('./views/Fund/FundList/FundList'));
+const AdminChatbot = React.lazy(() => import('./views/ServiceCenter/AdminChatbot/AdminChatbot'));
+const Notice = React.lazy(() => import('./views/ServiceCenter/Notice/Notice'));
+const ReminderMail = React.lazy(() => import('./views/ServiceCenter/ReminderMail/ReminderMail'));
+const SendEmailCounseling = React.lazy(() => import('./views/ServiceCenter/SendEmailCounseling/SendEmailCounseling'));
 
 
 const routes = [
@@ -82,7 +87,11 @@ const routes = [
   { path: '/users', exact: true,  name: 'Users', component: Users },
   { path: '/users/:id', exact: true, name: 'User Details', component: User },
   { path: '/AdminDepositProduct/DeposirProductList', name: 'DeposirProductList', component: DeposirProductList },
- 
+  { path: '/Fund/FundList', name: 'FundList', component: FundList },
+  { path: '/ServiceCenter/AdminChatbot', name: 'AdminChatbot', component: AdminChatbot },
+  { path: '/ServiceCenter/Notice', name: 'Notice', component: Notice },
+  { path: '/ServiceCenter/ReminderMail', name: 'ReminderMail', component: ReminderMail },
+  { path: '/ServiceCenter/SendEmailCounseling', name: 'SendEmailCounseling', component: SendEmailCounseling },
 ];
 
 export default routes;

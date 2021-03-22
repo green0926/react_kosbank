@@ -202,13 +202,13 @@ const _nav =  [
   {
     _tag: 'CSidebarNavDropdown',
     name: '펀드',
-    route: '/notifications',
+    route: '/Fund',
     icon: 'cil-star',
     _children: [
       {
-        _tag: '승인요청리스트',
-        name: 'Alerts',
-        to: '/notifications/alerts',
+        _tag: 'CSidebarNavItem',
+        name: '펀드승인요청리스트',
+        to: '/Fund/FundList',
       },
     ]
   },
@@ -220,28 +220,28 @@ const _nav =  [
   {
     _tag: 'CSidebarNavDropdown',
     name: '고객센터',
-    route: '/pages',
+    route: '/ServiceCenter',
     icon: 'cil-star',
     _children: [
       {
         _tag: 'CSidebarNavItem',
         name: '공지사항',
-        to: '/login',
+        to: '/ServiceCenter/Notice',
       },
       {
         _tag: 'CSidebarNavItem',
         name: '챗봇',
-        to: '/register',
+        to: '/ServiceCenter/AdminChatbot',
       },
       {
         _tag: 'CSidebarNavItem',
         name: '이메일상담 리스트',
-        to: '/404',
+        to: '/ServiceCenter/SendEmailCounseling',
       },
       {
         _tag: 'CSidebarNavItem',
-        name: '대출상품',
-        to: '/500',
+        name: '채무 불이행자 목록',
+        to: '/ServiceCenter/ReminderMail',
       },
     ],
   },
