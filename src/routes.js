@@ -41,6 +41,9 @@ const DeposirProductList = React.lazy(() => import('./views/AdminDepositProduct/
 const FundList = React.lazy(() => import('./views/Fund/FundList/FundList'));
 const AdminChatbot = React.lazy(() => import('./views/ServiceCenter/AdminChatbot/AdminChatbot'));
 const Notice = React.lazy(() => import('./views/ServiceCenter/Notice/Notice'));
+const NoticeDetail = React.lazy(() => import('./views/ServiceCenter/Notice/NoticeDetail'));
+const NoticeModify = React.lazy(() => import('./views/ServiceCenter/Notice/NoticeModify'));
+const NoticeWrite = React.lazy(() => import('./views/ServiceCenter/Notice/NoticeWrite'));
 const ReminderMail = React.lazy(() => import('./views/ServiceCenter/ReminderMail/ReminderMail'));
 const SendEmailCounseling = React.lazy(() => import('./views/ServiceCenter/SendEmailCounseling/SendEmailCounseling'));
 
@@ -89,7 +92,10 @@ const routes = [
   { path: '/AdminDepositProduct/DeposirProductList', name: 'DeposirProductList', component: DeposirProductList },
   { path: '/Fund/FundList', name: 'FundList', component: FundList },
   { path: '/ServiceCenter/AdminChatbot', name: 'AdminChatbot', component: AdminChatbot },
-  { path: '/ServiceCenter/Notice', name: 'Notice', component: Notice },
+  { path: '/ServiceCenter/Notice', exact: true,  name: 'Notice', component: Notice },
+  { path: '/ServiceCenter/NoticeDetail/:N_NUM', exact: true,  name: 'Notice Details', component: NoticeDetail },
+  { path: '/ServiceCenter/NoticeModify/:N_NUM', exact: true,  name: 'NoticeModify', component: NoticeModify },
+  { path: '/ServiceCenter/NoticeWrite', name: 'NoticeWrite', component: NoticeWrite },
   { path: '/ServiceCenter/ReminderMail', name: 'ReminderMail', component: ReminderMail },
   { path: '/ServiceCenter/SendEmailCounseling', name: 'SendEmailCounseling', component: SendEmailCounseling },
 ];
